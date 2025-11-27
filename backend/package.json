@@ -1,27 +1,32 @@
 {
-  "name": "backend",
+  "name": "authenticationsystem",
   "version": "1.0.0",
-  "description": "MERN Auth System Backend",
+  "description": "MERN Authentication System",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node serve.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usamadev111/authenticationsystem.git"
   },
   "keywords": [
-    "MERNAUTH",
-    "AUTHSYSTEM"
+    "authentication"
   ],
   "author": "Usama Fazal",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usamadev111/authenticationsystem/issues"
+  },
+  "homepage": "https://github.com/usamadev111/authenticationsystem#readme",
   "dependencies": {
-    "bcryptjs": "^3.0.2",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "handlebars": "^4.7.8",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.2",
-    "nodemailer": "^7.0.10",
-    "nodemon": "^3.1.10"
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^9.0.0"
   }
 }

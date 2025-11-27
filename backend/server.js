@@ -1,17 +1,20 @@
 import express from "express";
+// import dotenv from "dotenv";
 import "dotenv/config";
-import connectDB from "./database/db.js";
-import userRoute from "./routes/userRoute.js";
+import connectDB from "./config/db.js";
+// importing routes
+import routes from "./routes/user.js";
+// dotenv.config();
 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
-
 app.use(express.json());
 
-app.use("/user", userRoute);
+app.use("/api/v1", routes);
 
-app.listen(PORT, () => {
-  connectDB();
-  console.log(`server is listenong at ${PORT}`);
+const port = process.env.PORT || 5000;
+// console.log(port);
+
+app.listen(port, async () => {
+  await connectDB();
+  console.log(`Server running at port ${port}`);
 });
